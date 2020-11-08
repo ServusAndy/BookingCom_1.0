@@ -106,7 +106,7 @@ public class HomePageHelper extends PageBase {
         int size = allPrices.size();
         int[] arrPrices = new int[size];
         for(int i = 0;i<size; i++){
-            arrPrices[i] = parseInt(allPrices.get(i).getText().substring(2));
+            arrPrices[i] = parseInt(allPrices.get(i).getText().substring(4));
         }
 
         int[] copiedArrPrices = Arrays.copyOf(arrPrices,size);

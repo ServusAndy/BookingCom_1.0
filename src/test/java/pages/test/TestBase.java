@@ -1,6 +1,5 @@
 package pages.test;
 
-import com.google.common.io.Files;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -10,7 +9,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import ru.stqa.selenium.factory.WebDriverPool;
 
-import java.io.File;
 import java.io.IOException;
 
 /**
@@ -38,13 +36,13 @@ public class TestBase {
 
     @Override
     public void onException(Throwable throwable, WebDriver driver) {
-      File tmp = ((TakesScreenshot) driver)
-              .getScreenshotAs(OutputType.FILE);
-      File screen = new File("screen" + System
-              .currentTimeMillis() + ".png");
+//      File tmp = ((TakesScreenshot) driver)
+//              .getScreenshotAs(OutputType.FILE);
+//      File screen = new File("screen" + System
+//              .currentTimeMillis() + ".png");
       try {
-        Files.copy(tmp, screen);
-      } catch (IOException e) {
+//        Files.copy(tmp, screen);
+      } catch (Exception e) {
         e.printStackTrace();
       }
     }
