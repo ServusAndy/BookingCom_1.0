@@ -12,7 +12,6 @@ import ru.stqa.selenium.factory.WebDriverPool;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 /**
  * Base class for TestNG-based test classes
@@ -60,6 +59,7 @@ public class TestBase {
 
   @BeforeMethod
   public void initWebDriver() {
+    System.setProperty("webdriver.gecko.driver", "/home/andi/Downloads/geckodriver");
     driver = new EventFiringWebDriver(WebDriverPool.DEFAULT.getDriver(capabilities));
     driver.register(new MyListener());
     driver.get(baseUrl);
