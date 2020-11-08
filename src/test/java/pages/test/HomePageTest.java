@@ -29,6 +29,5 @@ public class HomePageTest extends TestBase {
         homePage.selectLowestFirstButtonFirst()
                 .waitUntilResultsPageIsLoaded();
         Assert.assertTrue(homePage.sortPricesIncreasingSucccess());
-        Assert.assertTrue(homePage.sortPricesIncreasingSucccess());
     }
 }
