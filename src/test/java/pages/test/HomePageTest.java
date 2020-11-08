@@ -28,7 +28,6 @@ public class HomePageTest extends TestBase {
     public void lowestFirstButtonTest() {
         homePage.selectLowestFirstButtonFirst()
                 .waitUntilResultsPageIsLoaded();
-        AssertionError.class.getCanonicalName();
         Assert.assertTrue(homePage.sortPricesIncreasingSucccess());
     }
 }
