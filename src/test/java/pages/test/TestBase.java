@@ -40,7 +40,6 @@ public class TestBase {
 //              .getScreenshotAs(OutputType.FILE);
 //      File screen = new File("screen" + System
 //              .currentTimeMillis() + ".png");
-      driver
       try {
 //        Files.copy(tmp, screen);
       } catch (Exception e) {
